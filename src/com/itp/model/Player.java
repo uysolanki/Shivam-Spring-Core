@@ -4,7 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Map;
 
-public class Player {
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
+
+public class Player// implements InitializingBean,DisposableBean
+{
 
 	private int jno;
 	private String playerName;
@@ -77,14 +84,32 @@ public class Player {
 		return "Player [jno=" + jno + ", playerName=" + playerName + ", mp=" + mp + ", rs=" + rs + ", teams="
 				+ Arrays.toString(teams) + ", trophies=" + trophies + ", centuries=" + centuries + "]";
 	}
+//	@Override
+//	public void destroy() throws Exception {
+//		System.out.println("Invoked just before object destruction");
+//		
+//	}
+//	
+//	
+//	@Override
+//	public void afterPropertiesSet() throws Exception {
+//		System.out.println("Invoked immediately after constructor");
+//		
+//	}
+	
+	@PostConstruct
+	public void abc() {
+		System.out.println("Invoked immediately after constructor$$$$$");	
+	}
 	
 	
+	@PreDestroy
+	public void xyz() {
+		System.out.println("Invoked just before object destruction$$$$$");
+		
+	}
 	
-	
-	
-	
-	
-	
-	
-	
+	@Override
+	protected void finalize() throws Throwable {
+	}
 }

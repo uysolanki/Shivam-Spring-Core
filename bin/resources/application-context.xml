@@ -7,6 +7,8 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
+	<context:annotation-config />
+	
 	<bean id="itpengine" class="com.itp.model.Engine">
 		<constructor-arg value="15"></constructor-arg>
 		<constructor-arg value="1500"></constructor-arg>
@@ -55,7 +57,7 @@
 
 	</bean>
 
-	<bean id="p1" class="com.itp.model.Player" scope="prototype">
+	<bean id="p1" class="com.itp.model.Player" scope="prototype">   <!-- init-method="abc" destroy-method="xyz" -->
 		<property name="jno">
 			<value>18</value>
 		</property>
