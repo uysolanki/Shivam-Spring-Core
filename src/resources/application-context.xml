@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!-- <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:context="http://www.springframework.org/schema/context"
@@ -57,7 +57,7 @@
 
 	</bean>
 
-	<bean id="p1" class="com.itp.model.Player" scope="prototype">   <!-- init-method="abc" destroy-method="xyz" -->
+	<bean id="p1" class="com.itp.model.Player" scope="prototype">   init-method="abc" destroy-method="xyz"
 		<property name="jno">
 			<value>18</value>
 		</property>
@@ -135,4 +135,4 @@
 		<constructor-arg value="White"></constructor-arg>
 	</bean>
 
-</beans>
+</beans> -->
